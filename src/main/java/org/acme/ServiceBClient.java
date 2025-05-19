@@ -5,11 +5,11 @@ import javax.ws.rs.Path;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 
-@Path("/api")
+@Path("/cpu")
 @RegisterRestClient(configKey="be-service")
 public interface ServiceBClient {
 
     @GET
-    @Path("/cpu/burn")
+    @Path("/burn")
     String callEndpoint();
 }
